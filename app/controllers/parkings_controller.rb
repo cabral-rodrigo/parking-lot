@@ -1,5 +1,6 @@
 class ParkingsController < ApplicationController
-  befor_action :set_params, only: [:show, :edit, :update, :delete]
+  skip_before_action :authenticate_user!, only: [:index]
+  before_action :set_params, only: [:show, :edit, :update, :delete]
 
   def index
     @parkings = Parking.all
@@ -34,7 +35,7 @@ class ParkingsController < ApplicationController
   end
 
   def destroy
-    @parking.delete
+    @parking.destroy
     redirect_to root
   end
 
