@@ -4,11 +4,11 @@ class CreateParkings < ActiveRecord::Migration[5.2]
       t.string :address
       t.string :picture
       t.string :confirmation
-      t.boolean :covered
-      t.boolean :security
-      t.boolean :camera
-      t.integer :size
-      t.boolean :gated
+      t.boolean :covered, default: false
+      t.boolean :security, default: false
+      t.boolean :camera, default: false
+      t.string :size
+      t.boolean :gated, default: false
       t.integer :price
       t.references :user, foreign_key: true
 

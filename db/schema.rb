@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2019_02_18_192720) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.string "availability"
     t.string "status"
     t.date "date"
     t.bigint "parking_id"
@@ -31,11 +30,11 @@ ActiveRecord::Schema.define(version: 2019_02_18_192720) do
     t.string "address"
     t.string "picture"
     t.string "confirmation"
-    t.boolean "covered"
-    t.boolean "security"
-    t.boolean "camera"
-    t.integer "size"
-    t.boolean "gated"
+    t.boolean "covered", default: false
+    t.boolean "security", default: false
+    t.boolean "camera", default: false
+    t.string "size"
+    t.boolean "gated", default: false
     t.integer "price"
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -47,12 +46,10 @@ ActiveRecord::Schema.define(version: 2019_02_18_192720) do
     t.string "picture"
     t.integer "rating_user"
     t.date "date"
-    t.bigint "user_id"
-    t.bigint "parking_id"
+    t.bigint "booking_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["parking_id"], name: "index_reviews_on_parking_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
+    t.index ["booking_id"], name: "index_reviews_on_booking_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -70,6 +67,5 @@ ActiveRecord::Schema.define(version: 2019_02_18_192720) do
   add_foreign_key "bookings", "parkings"
   add_foreign_key "bookings", "users"
   add_foreign_key "parkings", "users"
-  add_foreign_key "reviews", "parkings"
-  add_foreign_key "reviews", "users"
+  add_foreign_key "reviews", "bookings"
 end
