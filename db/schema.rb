@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2019_02_18_192720) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.string "availability"
     t.string "status"
     t.date "date"
     t.bigint "parking_id"
