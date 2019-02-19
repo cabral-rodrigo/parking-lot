@@ -1,17 +1,18 @@
 class ParkingsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
-  before_action :set_params, only: [:show, :edit, :update, :delete]
-
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_params, only: [:show, :edit, :update, :destroy]
   def index
-    @parkings = Parking.all
+    @parkings = policy_scope(Parking)
   end
 
   def new
     @parking = Parking.new
+    authorize @parking
   end
 
   def create
     @parking = Parking.new(parking_params)
+    authorize @parking
     if @parking.save
       redirect_to @parking
     else
@@ -49,5 +50,6 @@ class ParkingsController < ApplicationController
 
   def set_parking
     @parking = Parking.find(params[:id])
+    authorize @parking
   end
 end

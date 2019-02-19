@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'parkings#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
   resources :bookings, except: [:destroy, :new, :create] do
     resources :reviews, only: [:new, :create]
   end
@@ -11,9 +11,11 @@ Rails.application.routes.draw do
   end
 
   namespace :owner do
-    resources :parkings, except: [:new, :create] do
-      resources :bookings, only: [:edit, :update]
-    end
-    resources :bookings, only: [:index, :show]
+    resources :parkings, only: :index
+    resources :bookings, only: :index
+  end
+
+  namespace :client do
+    resources :bookings, only: :index
   end
 end
