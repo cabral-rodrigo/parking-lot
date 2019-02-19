@@ -3,7 +3,12 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
     <h1><%= @parking.address %></h1>
-    <p><%= @parking.price %></p>
+    <p>Status: <%= @parking.confirmation %></p>
+    <p>Covered: <%= @parking.covered %></p>
+    <p>Security: <%= @parking.security %></p>
+    <p>Camera: <%= @parking.camera %></p>
+    <p>Size" <%= @parking.size %></p>
+    <p>Price/hour: <%= @parking.price %></p>
     <a class="btn btn-flat" href="#">Book Parking Lot</a>
   </div>
 </div>
