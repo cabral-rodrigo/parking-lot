@@ -3,7 +3,7 @@ class CreateParkings < ActiveRecord::Migration[5.2]
     create_table :parkings do |t|
       t.string :address
       t.string :picture
-      t.string :confirmation
+      t.boolean :confirmation, default: false
       t.boolean :covered, default: false
       t.boolean :security, default: false
       t.boolean :camera, default: false
