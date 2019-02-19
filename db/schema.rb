@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_02_18_192720) do
   create_table "parkings", force: :cascade do |t|
     t.string "address"
     t.string "picture"
-    t.string "confirmation"
+    t.boolean "confirmation", default: false
     t.boolean "covered", default: false
     t.boolean "security", default: false
     t.boolean "camera", default: false
