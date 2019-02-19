@@ -1,6 +1,6 @@
 class ParkingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_params, only: [:show, :edit, :update, :destroy]
+  before_action :set_parking, only: [:show, :edit, :update, :destroy]
   def index
     @parkings = policy_scope(Parking)
   end
