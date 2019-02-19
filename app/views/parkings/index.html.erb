@@ -1,6 +1,17 @@
-<h1>Testing index</h1>
+<h1>Parking Lots</h1>
 
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 offset-col-xs-3">
 <% @parkings.each do |parking| %>
-<p><%= parking.address %></p>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+  <h2><%= link_to parking.address, parking_path(parking) %></h2>
+  <br>
+  <p>Price/hour: <%= parking.price %></p>
+</div>
 <% end %>
+
+<%= link_to "Create a Parking Lot", new_parking_path, class:"btn btn-primary" %>
+</div>
+</div>
+</div>

@@ -12,7 +12,9 @@ class ParkingsController < ApplicationController
 
   def create
     @parking = Parking.new(parking_params)
+    @parking.user = current_user
     authorize @parking
+
     if @parking.save
       redirect_to @parking
     else
@@ -28,9 +30,11 @@ class ParkingsController < ApplicationController
 
   def update
     @parking.update(parking_params)
+
     if @parking.save
       redirect_to @parking
     else
+
       render :edit
     end
   end
@@ -43,7 +47,7 @@ class ParkingsController < ApplicationController
   private
 
   def parking_params
-    params.require(:parking).permit(:address, :picture, :confirmation,
+    params.require(:parking).permit(:address, :confirmation,
                                     :covered, :security, :camera,
                                     :size, :gated, :price)
   end

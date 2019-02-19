@@ -12,4 +12,5 @@
   <%= f.input :gated, as: :radio_buttons, collection: [['yes', true], ['no', false]], label_method: :first, value_method: :second  %>
   <%= f.input :price, label: "$/hr"%>
   <%= f.button :submit, "Create parking", class: "btn btn-danger" %>
+  <%= link_to "Back", root_path, class: "btn btn-primary" %>
 <% end %>
