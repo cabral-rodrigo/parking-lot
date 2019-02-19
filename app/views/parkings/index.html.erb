@@ -6,7 +6,8 @@
 <% @parkings.each do |parking| %>
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
   <h2><%= link_to parking.address, parking_path(parking) %></h2>
-  <p><%= parking.price %></p>
+  <br>
+  <p>Price/hour: <%= parking.price %></p>
 </div>
 <% end %>
 
