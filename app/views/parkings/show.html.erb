@@ -1,15 +1,34 @@
 <h1>Parking Lot</h1>
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @parking.picture, height: 300, width: 400, crop: :fill %>')">
+  <div class="container transparent">
     <h1><%= @parking.address %></h1>
-    <p>Status: <%= @parking.confirmation %></p>
-    <p>Covered: <%= @parking.covered %></p>
-    <p>Security: <%= @parking.security %></p>
-    <p>Camera: <%= @parking.camera %></p>
-    <p>Size" <%= @parking.size %></p>
+    <p>Confirmation: <%= @parking.confirmation ? "Needs owner approval" : "Ready to park!"%></p>
+    <p>Covered: <% if @parking.covered %>
+        <i class="far fa-check-circle checkmark"></i>
+      <% else %>
+        <i class="far fa-times-circle times"></i>
+      <% end %>
+    </p>
+    <p>Security: <% if @parking.security %>
+        <i class="far fa-check-circle checkmark"></i>
+      <% else %>
+        <i class="far fa-times-circle times"></i>
+      <% end %>
+    </p>
+    <p>Camera: <% if @parking.camera %>
+        <i class="far fa-check-circle checkmark"></i>
+      <% else %>
+        <i class="far fa-times-circle times"></i>
+      <% end %>
+    </p>
+    <p>Size: <%= @parking.size %></p>
     <p>Price/hour: <%= @parking.price %></p>
-    <a class="btn btn-flat" href="#">Book Parking Lot</a>
+    <%= link_to "Book it!", new_parking_booking_path(:parking_id), class: "btn btn-primary" %>
+    <%= link_to "Back", root_path, class: "btn btn-danger" %>
   </div>
 </div>
-<%= link_to "Back", root_path, class: "btn btn-danger" %>
+
+
+
+
