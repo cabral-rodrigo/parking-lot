@@ -1,6 +1,6 @@
 <h1>Parking Lot</h1>
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @parking.picture, height: 300, width: 400, crop: :fill %>')">
   <div class="container">
     <h1><%= @parking.address %></h1>
     <p>Status: <%= @parking.confirmation %></p>
