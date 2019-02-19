@@ -6,12 +6,11 @@ class Parking < ApplicationRecord
   has_many :users, through: :bookings
   validates :address, presence: true
   validates :picture, presence: true
-  validates :confirmation, presence: true
-  validates :covered, presence: true
-  validates :security, presence: true
-  validates :camera, presence: true
+  validates :confirmation, inclusion: { in: [true, false] }
+  validates :covered, inclusion: { in: [true, false] }
+  validates :security, inclusion: { in: [true, false] }
+  validates :camera, inclusion: { in: [true, false] }
   validates :size, inclusion: { in: SIZE_CAR }
-  validates :gated, presence: true
-  validates :price, presence: true
-  validates :price, numericality: { only_integer: true }
+  validates :gated, inclusion: { in: [true, false] }
+  validates :price, presence: true, numericality: { only_integer: true }
 end
