@@ -2,6 +2,8 @@
 
 <%= simple_form_for(@parking) do |f| %>
   <%= f.input :address %>
+  <%= f.input :picture %>
+  <%= f.input :picture_cache, as: :hidden %>
   <%= f.input :confirmation, as: :radio_buttons, collection: [['yes', true], ['no', false]], label_method: :first, value_method: :second  %>
   <%= f.input :covered, as: :radio_buttons, collection: [['yes', true], ['no', false]], label_method: :first, value_method: :second  %>
   <%= f.input :security, as: :radio_buttons, collection: [['yes', true], ['no', false]], label_method: :first, value_method: :second  %>

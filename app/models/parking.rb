@@ -1,5 +1,6 @@
 class Parking < ApplicationRecord
   SIZE_CAR = ["Small Car", "Medium Car", "Big Car", "Truck"]
+  mount_uploader :picture, PictureUploader
   belongs_to :user
   has_many :bookings
   has_many :reviews, through: :bookings
