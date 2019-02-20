@@ -1,0 +1,36 @@
+<h1>Booked Lot</h1>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @booking.parking.picture, height: 300, width: 400, crop: :fill %>')">
+  <div class="container transparent">
+    <div>
+      <h2><%= @booking.parking.address %></h1>
+      <h3>Reservado para: <%= @booking.date %></h3>
+      <h3><%= @booking.status %></h3>
+      <p>Covered: <% if @booking.parking.covered %>
+          <i class="far fa-check-circle checkmark"></i>
+        <% else %>
+          <i class="far fa-times-circle times"></i>
+        <% end %>
+      </p>
+      <p>Security: <% if @booking.parking.security %>
+          <i class="far fa-check-circle checkmark"></i>
+        <% else %>
+          <i class="far fa-times-circle times"></i>
+        <% end %>
+      </p>
+      <p>Camera: <% if @booking.parking.camera %>
+          <i class="far fa-check-circle checkmark"></i>
+        <% else %>
+          <i class="far fa-times-circle times"></i>
+        <% end %>
+      </p>
+      <p>Size: <%= @booking.parking.size %></p>
+      <p>Price/hour: $<%= @booking.parking.price %></p>
+      <%= link_to "Back", root_path, class: "btn btn-danger" %>
+    </div>
+  </div>
+</div>
+
+
+
+
