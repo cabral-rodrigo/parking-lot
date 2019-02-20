@@ -47,12 +47,14 @@ class ParkingsController < ApplicationController
       redirect_to root_path
     else
       render :edit
+
     end
   end
 
   def destroy
+    @parking.reviews.map { |review| review.destroy }
     @parking.destroy
-    redirect_to root
+    redirect_to root_path
   end
 
   private
