@@ -2,7 +2,8 @@
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @parking.picture, height: 300, width: 400, crop: :fill %>')">
   <div class="container transparent">
-    <h1><%= @parking.address %></h1>
+    <h1><%= @parking.name %></h1>
+    <p><%=  @parking.address %></p>
     <p>Confirmation: <%= @parking.confirmation ? "Ready to park!" : "Needs owner approval" %></p>
     <p>Covered: <% if @parking.covered %>
         <i class="far fa-check-circle checkmark"></i>

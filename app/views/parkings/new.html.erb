@@ -1,6 +1,7 @@
 <h1>Create your own Parking Lot</h1>
 
 <%= simple_form_for(@parking) do |f| %>
+  <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :picture %>
   <%= f.input :picture_cache, as: :hidden %>
