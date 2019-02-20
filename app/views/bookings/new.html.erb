@@ -1,9 +1,6 @@
-<h1>testing booking new</h1>
-
-
-<%= simple_form_for[@parking, @booking]] do |f| %>
-  <%= f.input :status, as: :hidden, value:"pending"%>
-  <%= f.input :date %>
-
-<% end %>
-
+<h1>BOOK IT</h1>
+<%= render "form" %>
+<div>
+  <h1>parking informations</h1>
+  <p><%= @parking.id %></p>
+</div>

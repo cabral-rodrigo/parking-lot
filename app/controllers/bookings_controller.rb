@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
+  before_action :set_parking, only: [:new, :create]
 
   def index
     @bookings = policy_scope(Booking)
@@ -11,13 +12,11 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @parking = Parking.find(:parking_id)
     authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @parking = Parking.find(:parking_id)
     @booking.parking = @parking
     @booking.user = current_user
     authorize @booking
@@ -49,6 +48,10 @@ class BookingsController < ApplicationController
   def set_booking
     @booking = Booking.find(params[:id])
     authorize @booking
+  end
+
+  def set_parking
+    @parking = Parking.find(params[:parking_id])
   end
 end
 
