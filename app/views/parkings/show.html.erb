@@ -2,8 +2,8 @@
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @parking.picture, height: 300, width: 400, crop: :fill %>')">
   <div class="container transparent">
-    <h1><%= @parking.name %></h1>
-    <p><%=  @parking.address %></p>
+    <h1><%= @parking.name.upcase %></h1>
+    <p><strong><%=  @parking.address %></strong></p>
     <p>Confirmation: <%= @parking.confirmation ? "Ready to park!" : "Needs owner approval" %></p>
     <p>Covered: <% if @parking.covered %>
         <i class="far fa-check-circle checkmark"></i>
@@ -25,16 +25,16 @@
     </p>
     <p>Size: <%= @parking.size %></p>
     <p>Price/hour: <%= @parking.price %></p>
-    <%= link_to "Book it!", new_parking_booking_path(@parking), class: "btn btn-primary" %>
+    <%= link_to "Book it!", new_parking_booking_path(@parking), class: "btn btn-success" %>
     <%= link_to "Back", root_path, class: "btn btn-danger" %>
     <% if policy(@parking).edit? %>
     <%= link_to "Update", edit_parking_path(@parking), class: "btn btn-warning" %>
   <% end %>
     <div
-  id="map"
-  style="width: 100%;height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      id="map"
+      style="width: 100%;height: 600px; margin-top: 20px; margin-bottom: 20px"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   >
   </div>
 </div>

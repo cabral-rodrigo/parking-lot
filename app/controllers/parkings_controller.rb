@@ -31,12 +31,11 @@ class ParkingsController < ApplicationController
   end
 
   def show
-    @markers = @parking.map do |parking|
-      {
-        lng: parking.longitude,
-        lat: parking.latitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { parking: parking })
-      }
+    @markers = [{
+        lng: @parking.longitude,
+        lat: @parking.latitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { parking: @parking })
+      }]
   end
 
   def edit
@@ -44,28 +43,30 @@ class ParkingsController < ApplicationController
 
   def update
     @parking.update(parking_params)
+
     if @parking.save
       redirect_to @parking
     else
+
       render :edit
     end
-   end
-
-    def destroy
-      @parking.destroy
-      redirect_to root
-    end
-
-    private
-
-    def parking_params
-      params.require(:parking).permit(:address, :confirmation,
-        :covered, :security, :camera,
-        :size, :gated, :price, :picture, :name)
-    end
-
-    def set_parking
-      @parking = Parking.find(params[:id])
-      authorize @parking
-    end
   end
+
+  def destroy
+    @parking.destroy
+    redirect_to root
+  end
+
+  private
+
+  def parking_params
+    params.require(:parking).permit(:address, :confirmation,
+                                    :covered, :security, :camera,
+                                    :size, :gated, :price, :picture, :name)
+  end
+
+  def set_parking
+    @parking = Parking.find(params[:id])
+    authorize @parking
+  end
+end

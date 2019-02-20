@@ -52,7 +52,7 @@ parking_attributes = [
     name:         "cochera de Meli 1"
   },
   {
-    address:      'Thames 2334, Buenos Aires',
+    address:      'Thames 2338, Buenos Aires',
     confirmation: true,
     covered:      true,
     security:     true,
