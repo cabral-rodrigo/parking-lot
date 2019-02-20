@@ -6,11 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts 'Killing the children before the parents'
+
+Review.destroy_all
+Booking.destroy_all
+Parking.destroy_all
+User.destroy_all
+
 puts "starting seeds"
 
 #-----------------------------------------------------------
-
-User.destroy_all
 
 puts 'Creating Users...'
 user_attributes = [
@@ -25,17 +30,17 @@ user_attributes = [
 ]
 User.create!(user_attributes)
 
-Parking.destroy_all
 
 #-----------------------------------------------------------
 user1 = User.first
 user2 = User.last
 
 puts 'Creating Parkings...'
+
+
 parking_attributes = [
   {
     address:      'jean jaures 1165, cochera 15',
-    picture:      'parking_lot1.jpg',
     confirmation: true,
     covered:      true,
     security:     true,
@@ -47,7 +52,6 @@ parking_attributes = [
   },
   {
     address:      'avenida cordoba 1165, cochera 15',
-    picture:      'parking_lot2.jpg',
     confirmation: true,
     covered:      true,
     security:     true,
@@ -59,7 +63,11 @@ parking_attributes = [
   },
 ]
 
-Parking.create!(parking_attributes)
+parking_attributes.each do |parking|
+  p = Parking.new(parking)
+  p.remote_picture_url = "https://source.unsplash.com/random"
+  p.save
+end
 
 #-----------------------------------------------------------
 

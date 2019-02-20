@@ -1,11 +1,12 @@
 class Parking < ApplicationRecord
   SIZE_CAR = ["Small Car", "Medium Car", "Big Car", "Truck"]
+  mount_uploader :picture, PictureUploader
   belongs_to :user
   has_many :bookings
   has_many :reviews, through: :bookings
   has_many :users, through: :bookings
   validates :address, presence: true
-  validates :picture, presence: true
+  # validates :picture, presence: true
   validates :confirmation, inclusion: { in: [true, false] }
   validates :covered, inclusion: { in: [true, false] }
   validates :security, inclusion: { in: [true, false] }
