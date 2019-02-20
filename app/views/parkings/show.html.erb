@@ -30,6 +30,9 @@
     <% if policy(@parking).edit? %>
     <%= link_to "Update", edit_parking_path(@parking), class: "btn btn-warning" %>
   <% end %>
+  <% if policy(@parking).destroy? %>
+    <%= link_to "Delete", parking_path(@parking), method: :delete, data: { confirm: "Are you sure you want to delete the parking?" }, class: "btn btn-warning" %>
+  <% end %>
     <div
       id="map"
       style="width: 100%;height: 600px; margin-top: 20px; margin-bottom: 20px"
