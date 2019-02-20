@@ -3,7 +3,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @parking.picture, height: 300, width: 400, crop: :fill %>')">
   <div class="container transparent">
     <h1><%= @parking.address %></h1>
-    <p>Confirmation: <%= @parking.confirmation ? "Needs owner approval" : "Ready to park!"%></p>
+    <p>Confirmation: <%= @parking.confirmation ? "Ready to park!" : "Needs owner approval" %></p>
     <p>Covered: <% if @parking.covered %>
         <i class="far fa-check-circle checkmark"></i>
       <% else %>
@@ -24,7 +24,7 @@
     </p>
     <p>Size: <%= @parking.size %></p>
     <p>Price/hour: <%= @parking.price %></p>
-    <%= link_to "Book it!", new_parking_booking_path(:parking_id), class: "btn btn-primary" %>
+    <%= link_to "Book it!", new_parking_booking_path(@parking), class: "btn btn-primary" %>
     <%= link_to "Back", root_path, class: "btn btn-danger" %>
   </div>
 </div>
