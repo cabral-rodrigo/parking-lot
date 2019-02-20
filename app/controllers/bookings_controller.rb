@@ -11,18 +11,18 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    @parking = Parking.find(:parking_id)
+    @parking = Parking.find(params[:parking_id])
     authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @parking = Parking.find(:parking_id)
+    @parking = Parking.find(params[:parking_id])
     @booking.parking = @parking
     @booking.user = current_user
     authorize @booking
     if @booking.save
-      redirect_to @booking
+      redirect_to booking_path(@booking)
     else
       render :new
     end

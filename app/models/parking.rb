@@ -6,7 +6,7 @@ class Parking < ApplicationRecord
   has_many :reviews, through: :bookings
   has_many :users, through: :bookings
   validates :address, presence: true
-  # validates :picture, presence: true
+  validates :picture, presence: true
   validates :confirmation, inclusion: { in: [true, false] }
   validates :covered, inclusion: { in: [true, false] }
   validates :security, inclusion: { in: [true, false] }
