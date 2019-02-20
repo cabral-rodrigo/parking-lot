@@ -1,0 +1,22 @@
+#parking-holder {
+  display: flex;
+}
+
+#parkings-options {
+  flex: 1 0 60%;
+}
+
+#parkings-map {
+  flex: 1 0 40%;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  #parking-holder {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #parkings-options {
+    flex: none;
+  }
+}

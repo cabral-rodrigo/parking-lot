@@ -40,7 +40,7 @@ puts 'Creating Parkings...'
 
 parking_attributes = [
   {
-    address:      'jean jaures 1165, cochera 15',
+    address:      'Thames 2334, Buenos Aires',
     confirmation: true,
     covered:      true,
     security:     true,
@@ -48,10 +48,11 @@ parking_attributes = [
     size:         'Small Car',
     gated:        true,
     price:        50,
-    user:         user1
+    user:         user1,
+    name:         "cochera de Meli 1"
   },
   {
-    address:      'avenida cordoba 1165, cochera 15',
+    address:      'Thames 2334, Buenos Aires',
     confirmation: true,
     covered:      true,
     security:     true,
@@ -59,7 +60,20 @@ parking_attributes = [
     size:         'Medium Car',
     gated:        true,
     price:        50,
-    user:         user1
+    user:         user1,
+    name:         "cochera de Meli 2"
+  },
+    {
+    address:      'Jean Jaures 1165, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Medium Car',
+    gated:        true,
+    price:        50,
+    user:         user1,
+    name:         "cochera de rodrigo"
   },
 ]
 
