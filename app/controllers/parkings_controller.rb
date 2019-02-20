@@ -38,11 +38,9 @@ class ParkingsController < ApplicationController
 
   def update
     @parking.update(parking_params)
-
     if @parking.save
-      redirect_to @parking
+      redirect_to root_path
     else
-
       render :edit
     end
   end
@@ -57,7 +55,7 @@ class ParkingsController < ApplicationController
   def parking_params
     params.require(:parking).permit(:address, :confirmation,
                                     :covered, :security, :camera,
-                                    :size, :gated, :price, :picture, :name)
+                                    :size, :gated, :price, :picture, :name, :latitude, :longitude, :picture_cache)
   end
 
   def set_parking
