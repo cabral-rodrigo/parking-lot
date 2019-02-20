@@ -27,6 +27,9 @@
     <p>Price/hour: <%= @parking.price %></p>
     <%= link_to "Book it!", new_parking_booking_path(@parking), class: "btn btn-primary" %>
     <%= link_to "Back", root_path, class: "btn btn-danger" %>
+    <% if policy(@parking).edit? %>
+    <%= link_to "Update", edit_parking_path(@parking), class: "btn btn-warning" %>
+  <% end %>
   </div>
 </div>
 
