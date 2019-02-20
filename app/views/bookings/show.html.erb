@@ -3,8 +3,14 @@
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @booking.parking.picture, height: 300, width: 400, crop: :fill %>')">
   <div class="container transparent">
-    <h1><%= @booking.parking.address %></h1>
-    <p>Confirmation: <%= @booking.status %></p>
+    <h1><%= @booking.parking.name %></h1>
+    <h2><%= @booking.parking.address %></h2>
+    <p>Confirmation: <% if @booking.parking.confirmation %>
+      Approved
+      <% else %>
+      Pending
+      <% end %>
+    </p>
     <p>Covered: <% if @booking.parking.covered %>
         <i class="far fa-check-circle checkmark"></i>
       <% else %>
