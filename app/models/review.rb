@@ -1,5 +1,6 @@
 class Review < ApplicationRecord
   RATING = [1, 2, 3, 4, 5]
+  mount_uploader :picture, PictureUploader
   belongs_to :booking
   validates :rating_user, inclusion: { in: RATING }
   validates :rating_user, numericality: { only_integer: true }
