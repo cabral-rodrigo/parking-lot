@@ -31,6 +31,11 @@ class ParkingsController < ApplicationController
   end
 
   def show
+    @markers = [{
+        lng: @parking.longitude,
+        lat: @parking.latitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { parking: @parking })
+      }]
   end
 
   def edit
