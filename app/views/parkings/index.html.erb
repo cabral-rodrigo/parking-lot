@@ -1,9 +1,9 @@
-<h1>Parking Lots</h1>
+<h1 style="margin: 0px; padding: 8px">Parking Lots</h1>
 
-<div class="container">
-  <div class="row">
+<div id='parking-holder'>
+  <div id='parkings-options'>
     <% @parkings.each do |parking| %>
-    <div class="col-xs-4">
+    <div>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('<%= cl_image_path parking.picture, height: 300, width: 400, crop: :fill %>')">
         <h2><%= parking.name.upcase %></h2>
         <p><%= parking.address %></p>
@@ -22,12 +22,11 @@
     </div>
     <% end %>
   </div>
-
+  <div id='parkings-map'>
   <div
-    id="map"
-    style="width: 100%;height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
-  <%= link_to "Create a Parking Lot", new_parking_path, class:"btn btn-primary" %>
+  id="map"
+  style="width: 100%;height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  >
 </div>
