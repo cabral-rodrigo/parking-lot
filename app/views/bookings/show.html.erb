@@ -1,36 +1,43 @@
-<h1>Booked Lot</h1>
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @booking.parking.picture, height: 300, width: 400, crop: :fill %>')">
-  <div class="container transparent">
-    <div>
-      <h2><%= @booking.parking.address %></h1>
-      <h3>Reservado para: <%= @booking.date %></h3>
-      <h3><%= @booking.status %></h3>
-      <p>Covered: <% if @booking.parking.covered %>
-          <i class="far fa-check-circle checkmark"></i>
-        <% else %>
-          <i class="far fa-times-circle times"></i>
-        <% end %>
-      </p>
-      <p>Security: <% if @booking.parking.security %>
-          <i class="far fa-check-circle checkmark"></i>
-        <% else %>
-          <i class="far fa-times-circle times"></i>
-        <% end %>
-      </p>
-      <p>Camera: <% if @booking.parking.camera %>
-          <i class="far fa-check-circle checkmark"></i>
-        <% else %>
-          <i class="far fa-times-circle times"></i>
-        <% end %>
-      </p>
-      <p>Size: <%= @booking.parking.size %></p>
-      <p>Price/hour: $<%= @booking.parking.price %></p>
-      <%= link_to "Back", root_path, class: "btn btn-danger" %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1><%= @booking.date %></h1>
+      <%= link_to "Back to all bookings", root_path %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <h3>Bookings</h3>
+      <table class="table table-bordered">
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Reviews</h3>
+      <% if @booking.reviews.empty? %>
+        <p>Be the first to let a review</p>
+      <% else %>
+        <ul class="list-group">
+          <% @booking.reviews.each do |review| %>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span class="badge badge-primary badge-pill">
+                <% counter = 0 %>
+                <% 5.times do %>
+                  <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+                  <% counter += 1 %>
+                <% end %>
+              </span>
+              <%= review.content %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= render "reviews/new", booking: @booking, review: @review %>
     </div>
   </div>
 </div>
-
-
-
-
