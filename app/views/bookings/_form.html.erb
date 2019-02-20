@@ -1,4 +1,5 @@
-<%= simple_form_for[@parking, @booking]] do |f| %>
-  <%= f.input :status, as: :hidden, value:"pending"%>
+<%= simple_form_for [@parking, @booking] do |f| %>
+  <%= f.input :status, as: :hidden, :input_html => { :value => "pending" }%>
   <%= f.input :date %>
+  <%= f.button :submit, "Confirm Booking", class: "btn btn-success"%>
 <% end %>

@@ -24,7 +24,7 @@
     </p>
     <p>Size: <%= @parking.size %></p>
     <p>Price/hour: <%= @parking.price %></p>
-    <%= link_to "Book it!", new_parking_booking_path(:parking_id), class: "btn btn-primary" %>
+    <%= link_to "Book it!", new_parking_booking_path(@parking), class: "btn btn-primary" %>
     <%= link_to "Back", root_path, class: "btn btn-danger" %>
   </div>
 </div>
