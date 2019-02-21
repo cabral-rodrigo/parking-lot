@@ -48,18 +48,26 @@
         <% end %>
       </p>
     </li>
+    <li>
+      <p><% if @parking.gated %>
+        <%= image_tag "fence-active", width:50 %>
+        <% else %>
+        <%= image_tag "fence-unactive"%>
+        <% end %>
+      </p>
+    </li>
   </ul>
 
   <div class="show-options">
     <% if current_user != @parking.user || !user_signed_in?%>
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Book it</button>
-      <%= render "bookings/new", parking: @parking, booking: Booking.new %>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Book it</button>
+    <%= render "bookings/new", parking: @parking, booking: Booking.new %>
     <% end %>
     <%= link_to "Back", root_path, class: "btn btn-danger" %>
     <% if policy(@parking).edit? %>
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Update</button>
-      <%= render "edit", parking: @parking %>
-  <% end %>
+    <%= render "edit", parking: @parking %>
+    <% end %>
     <% if policy(@parking).destroy? %>
     <%= link_to "Delete", parking_path(@parking), method: :delete, data: { confirm: "Are you sure you want to delete the parking?" }, class: "btn btn-warning" %>
     <% end %>
