@@ -1,7 +1,11 @@
-<h1>Parking Lot</h1>
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @parking.picture, height: 300, width: 400, crop: :fill %>')">
-  <div class="container transparent">
+<div id="show-banner">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @parking.picture, height: 1000, width: 1000 %>')">
+ </div>
+</div>
+ <div>
+   <img class="avatar-bordered" src='https://kitt.lewagon.com/placeholder/users/krokrob'/>
+ </div>
+ <div class="container transparent">
     <h1><%= @parking.name.upcase %></h1>
     <p><strong><%=  @parking.address %></strong></p>
     <p>Confirmation: <%= @parking.confirmation ? "Ready to park!" : "Needs owner approval" %></p>
@@ -40,10 +44,7 @@
       id="map"
       style="width: 100%;height: 600px; margin-top: 20px; margin-bottom: 20px"
       data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  >
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-
-
 

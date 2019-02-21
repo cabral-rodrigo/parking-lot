@@ -77,9 +77,11 @@ parking_attributes = [
   },
 ]
 
-parking_attributes.each do |parking|
+COCHERAS = ["https://source.unsplash.com/random", "https://source.unsplash.com/random", "https://source.unsplash.com/random"]
+
+parking_attributes.each_with_index do |parking, index|
   p = Parking.new(parking)
-  p.remote_picture_url = "https://source.unsplash.com/random"
+  p.remote_picture_url = COCHERAS[index]
   p.save
 end
 
