@@ -1,48 +1,73 @@
-<div id="show-banner">
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @parking.picture, height: 1000, width: 1000 %>')">
+  <div id="show-banner">
+    <div class="banner flex-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @parking.picture, height: 1000, width: 1000 %>')">
+    </div>
+    <div id="show-avatar">
+     <img class="avatar-bordered" src='https://kitt.lewagon.com/placeholder/users/krokrob'/>
+   </div>
+
+
  </div>
-</div>
- <div>
-   <img class="avatar-bordered" src='https://kitt.lewagon.com/placeholder/users/krokrob'/>
- </div>
- <div class="container transparent">
-    <h1><%= @parking.name.upcase %></h1>
-    <p><strong><%=  @parking.address %></strong></p>
-    <p>Confirmation: <%= @parking.confirmation ? "Ready to park!" : "Needs owner approval" %></p>
-    <p>Covered: <% if @parking.covered %>
-        <i class="far fa-check-circle checkmark"></i>
+
+
+ <div class="container description-show">
+  <h1><%= @parking.name.upcase %></h1>
+  <div id="show-price">
+    <p class="remarcado">Price/hour: <strong><%= @parking.price %></strong></p>
+  </div>
+
+  <h3><%= @parking.size %></h3>
+  <ul class="list-inline">
+    <li>
+      <p><% if @parking.confirmation %>
+       <i class="fas fa-bolt active"></i>
+       <% else %>
+       <i class="fas fa-bolt unactive"></i>
+       <% end %>
+     </p>
+   </li>
+   <li>
+     <p><% if @parking.covered %>
+      <i class="fas fa-umbrella active"></i>
       <% else %>
-        <i class="far fa-times-circle times"></i>
+      <i class="fas fa-umbrella unactive"></i>
       <% end %>
     </p>
-    <p>Security: <% if @parking.security %>
-        <i class="far fa-check-circle checkmark"></i>
-      <% else %>
-        <i class="far fa-times-circle times"></i>
-      <% end %>
-    </p>
-    <p>Camera: <% if @parking.camera %>
-        <i class="far fa-check-circle checkmark"></i>
-      <% else %>
-        <i class="far fa-times-circle times"></i>
-      <% end %>
-    </p>
-    <p>Size: <%= @parking.size %></p>
-    <p>Price/hour: <%= @parking.price %></p>
+    <li>
+      <p><% if @parking.security %>
+        <%= image_tag "policeman-active", width:50 %>
+        <% else %>
+        <%= image_tag "policeman-unactive"%>
+        <% end %>
+      </p>
+    </li>
+    <li>
+      <p><% if @parking.camera %>
+        <i class="fas fa-video active"></i>
+        <% else %>
+        <i class="fas fa-video unactive"></i>
+        <% end %>
+      </p>
+    </li>
+  </ul>
+
+  <div class="show-options">
     <% if current_user != @parking.user || !user_signed_in?%>
-      <%= link_to "Book it!", new_parking_booking_path(@parking), class: "btn btn-success" %>
+    <%= link_to "Book it!", new_parking_booking_path(@parking), class: "btn btn-success" %>
     <% end %>
-      <%= link_to "Back", root_path, class: "btn btn-danger" %>
+    <%= link_to "Back", root_path, class: "btn btn-danger" %>
     <% if policy(@parking).edit? %>
     <%= link_to "Update", edit_parking_path(@parking), class: "btn btn-warning" %>
-  <% end %>
-  <% if policy(@parking).destroy? %>
+    <% end %>
+    <% if policy(@parking).destroy? %>
     <%= link_to "Delete", parking_path(@parking), method: :delete, data: { confirm: "Are you sure you want to delete the parking?" }, class: "btn btn-warning" %>
-  <% end %>
-    <div
-      id="map"
-      style="width: 100%;height: 600px; margin-top: 20px; margin-bottom: 20px"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    <% end %>
+  </div>
+  <p class="show-address"><strong><%=  @parking.address %></strong></p>
+  <div
+  id="map"
+  style="width: 100%;height: 600px; margin-top: 8px; margin-bottom: 20px"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   >
- </div>
+</div>
+</div>
