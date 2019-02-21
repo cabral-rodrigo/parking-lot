@@ -1,3 +1,4 @@
+
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -18,3 +19,7 @@
 
 // Main pages
 @import "index";
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
