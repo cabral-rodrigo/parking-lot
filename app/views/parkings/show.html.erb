@@ -25,7 +25,7 @@
     </p>
     <p>Size: <%= @parking.size %></p>
     <p>Price/hour: <%= @parking.price %></p>
-    <% if !policy(@parking.bookings).create? || !user_signed_in?%>
+    <% if current_user != @parking.user || !user_signed_in?%>
       <%= link_to "Book it!", new_parking_booking_path(@parking), class: "btn btn-success" %>
     <% end %>
       <%= link_to "Back", root_path, class: "btn btn-danger" %>
