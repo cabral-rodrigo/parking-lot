@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
   def new
     @review = Review.new
     @booking = Booking.find(params[:booking_id])
-    authorize @review if @booking.user == current_user && @booking.reviews.last.nil?
+    authorize @review if @booking.user == current_user && @booking.reviews.first.nil?
   end
 
   def create
@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     @booking = Booking.find(params[:booking_id])
     @review.booking = @booking
     @review.date = Date.today
-    authorize @review if (@booking.user == current_user) && (@review.user != current_user)
+    authorize @review
     if @review.save
       redirect_to @booking
     else

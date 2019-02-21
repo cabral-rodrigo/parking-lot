@@ -32,7 +32,7 @@
     </p>
     <p>Size: <%= @booking.parking.size %></p>
     <p>Price/hour: <%= @booking.parking.price %></p>
-    <% if policy(@booking.reviews).nil? %>
+    <% if @booking.reviews.first.nil?%>
     <%= link_to "Add review", new_booking_review_path(@booking), class: "btn btn-primary" %>
     <% end %>
     <%= link_to "Back", root_path, class: "btn btn-danger" %>
