@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="updateParking" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="newParking" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -7,9 +7,11 @@
         <h4 class="modal-title" id="myModalLabel">Booking</h4>
       </div>
       <div class="modal-body">
-          <%= simple_form_for(@parking) do |f| %>
+        <%= simple_form_for(parking) do |f| %>
           <%= f.input :name %>
           <%= f.input :address %>
+          <%= f.input :picture %>
+          <%= f.input :picture_cache, as: :hidden %>
           <%= f.input :confirmation, label: "confirmation" %>
           <%= f.input :covered, label: "covered" %>
           <%= f.input :security, label: "security" %>

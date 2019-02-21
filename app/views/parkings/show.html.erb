@@ -4,8 +4,6 @@
     <div id="show-avatar">
      <img class="avatar-bordered" src='https://kitt.lewagon.com/placeholder/users/krokrob'/>
    </div>
-
-
  </div>
 
 
@@ -34,9 +32,10 @@
     </p>
     <li>
       <p><% if @parking.security %>
-        <%= image_tag "policeman-active", width:50 %>
+
+        <%= image_tag "policeman-active.png", width:50 %>
         <% else %>
-        <%= image_tag "policeman-unactive"%>
+        <%= image_tag "policeman-unactive.png"%>
         <% end %>
       </p>
     </li>
@@ -50,9 +49,9 @@
     </li>
     <li>
       <p><% if @parking.gated %>
-        <%= image_tag "fence-active", width:50 %>
+        <%= image_tag "fence-active.png", width:50 %>
         <% else %>
-        <%= image_tag "fence-unactive"%>
+        <%= image_tag "fence-unactive.png"%>
         <% end %>
       </p>
     </li>
@@ -65,7 +64,7 @@
     <% end %>
     <%= link_to "Back", root_path, class: "btn btn-danger" %>
     <% if policy(@parking).edit? %>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Update</button>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#updateParking">Update</button>
     <%= render "edit", parking: @parking %>
     <% end %>
     <% if policy(@parking).destroy? %>
