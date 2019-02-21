@@ -10,7 +10,8 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "List your Place", new_parking_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <a href="#" type="button" class="navbar-wagon-item navbar-wagon-link" data-toggle="modal" data-target="#newBooking">List your Place</a>
+      <%= render "parkings/new", parking: Parking.new %>
       <% if !current_user.owned_parkings.empty? %>
         <%= link_to "My Spaces (#{current_user.owned_parkings.count})", owner_parkings_path, class: "navbar-wagon-item navbar-wagon-link" %>
         <%= link_to "My Bookings (#{current_user.owned_parkings.sum{|parking| parking.bookings.count }})", owner_bookings_path, class: "navbar-wagon-item navbar-wagon-link" %>

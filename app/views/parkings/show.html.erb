@@ -4,8 +4,6 @@
     <div id="show-avatar">
      <img class="avatar-bordered" src='https://kitt.lewagon.com/placeholder/users/krokrob'/>
    </div>
-
-
  </div>
 
 
@@ -57,7 +55,7 @@
     <% end %>
     <%= link_to "Back", root_path, class: "btn btn-danger" %>
     <% if policy(@parking).edit? %>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Update</button>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Update</button>
       <%= render "edit", parking: @parking %>
   <% end %>
     <% if policy(@parking).destroy? %>
