@@ -3,9 +3,10 @@
     <div class="col-xs-4 col-xs-offset-4">
 <h1>BOOK IT</h1>
 <%= render "form" %>
+<%= link_to "Back", parking_path(@parking), class: "btn btn-success"%>
 <div>
   <h1>parking informations</h1>
-  <p><%= @parking.id %></p>
+  <!-- <p><%= @parking.id %></p> -->
 </div>
 </div>
 </div>
