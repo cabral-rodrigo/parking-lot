@@ -1,2 +1,85 @@
-@import "show";
+
+#show-banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#show-avatar {
+  position: absolute;
+  bottom: -53px;
+}
+
+#show-price {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-banner {
+  height: 10em;
+  width: 100%;
+}
+
+.description-show {
+  margin-top: 35px;
+}
+
+.unactive {
+  color: lightgray;
+}
+
+.active {
+  color:orange;
+}
+
+.list-inline {
+ padding:0;
+ display: flex;
+ justify-content: center;
+ list-style: none;
+}
+.list-inline li {
+ margin: 0.5em;
+}
+.list-inline i {
+ font-size: 3em;
+}
+.list-inline li {
+ display: inline-grid;
+}
+.list-inline > li > a > p {
+ margin-bottom: 0;
+}
+
+h3 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 12.5px;
+  padding: 10px;
+}
+
+.remarcado {
+  color: white;
+  background-color: $primary;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: 1px solid $primary;
+  margin: 0px;
+}
+
+.show-options {
+  display: flex;
+  justify-content: center;
+  a {
+    margin: 0 10px;
+  }
+}
+
+.show-address {
+  margin-top: 18px;
+  margin-bottom: 2px;
+  font-weight: bold;
+
+}
 
