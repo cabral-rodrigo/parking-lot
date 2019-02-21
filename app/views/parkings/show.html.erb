@@ -26,7 +26,8 @@
     <p>Size: <%= @parking.size %></p>
     <p>Price/hour: <%= @parking.price %></p>
     <% if current_user != @parking.user || !user_signed_in?%>
-      <%= link_to "Book it!", new_parking_booking_path(@parking), class: "btn btn-success" %>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Book it</button>
+      <%= render "bookings/new", parking: @parking, booking: Booking.new %>
     <% end %>
       <%= link_to "Back", root_path, class: "btn btn-danger" %>
     <% if policy(@parking).edit? %>
@@ -43,7 +44,6 @@
   >
   </div>
 </div>
-
 
 
 
