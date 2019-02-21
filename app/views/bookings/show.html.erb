@@ -5,6 +5,7 @@
   <div class="container transparent">
     <h1><%= @booking.parking.name %></h1>
     <h2><%= @booking.parking.address %></h2>
+    <p><%= @booking.date %></p>
     <p>Status: <% if @booking.parking.confirmation %>
       Approved
       <% else %>
@@ -31,7 +32,7 @@
     </p>
     <p>Size: <%= @booking.parking.size %></p>
     <p>Price/hour: <%= @booking.parking.price %></p>
-    <% if @booking.reviews.last.nil? %>
+    <% if policy(@booking.reviews).nil? %>
     <%= link_to "Add review", new_booking_review_path(@booking), class: "btn btn-primary" %>
     <% end %>
     <%= link_to "Back", root_path, class: "btn btn-danger" %>

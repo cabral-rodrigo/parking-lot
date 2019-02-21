@@ -25,8 +25,10 @@
     </p>
     <p>Size: <%= @parking.size %></p>
     <p>Price/hour: <%= @parking.price %></p>
-    <%= link_to "Book it!", new_parking_booking_path(@parking), class: "btn btn-success" %>
-    <%= link_to "Back", root_path, class: "btn btn-danger" %>
+    <% if !policy(@parking.bookings).create? || !user_signed_in?%>
+      <%= link_to "Book it!", new_parking_booking_path(@parking), class: "btn btn-success" %>
+    <% end %>
+      <%= link_to "Back", root_path, class: "btn btn-danger" %>
     <% if policy(@parking).edit? %>
     <%= link_to "Update", edit_parking_path(@parking), class: "btn btn-warning" %>
   <% end %>
