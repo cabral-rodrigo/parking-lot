@@ -10,7 +10,7 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <a href="#" type="button" class="navbar-wagon-item navbar-wagon-link" data-toggle="modal" data-target="#newBooking">List your Place</a>
+      <a href="#" type="button" class="navbar-wagon-item navbar-wagon-link" data-toggle="modal" data-target="#newParking">List your Place</a>
       <%= render "parkings/new", parking: Parking.new %>
       <% if !current_user.owned_parkings.empty? %>
         <%= link_to "My Spaces (#{current_user.owned_parkings.count})", owner_parkings_path, class: "navbar-wagon-item navbar-wagon-link" %>
