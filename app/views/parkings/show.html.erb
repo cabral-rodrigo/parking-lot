@@ -64,7 +64,7 @@
     <% end %>
     <%= link_to "Back", root_path, class: "btn btn-danger" %>
     <% if policy(@parking).edit? %>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Update</button>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#updateParking">Update</button>
     <%= render "edit", parking: @parking %>
     <% end %>
     <% if policy(@parking).destroy? %>
