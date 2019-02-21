@@ -1,4 +1,3 @@
-<h1 style="margin: 0px; padding: 8px">Parking Lots</h1>
 
 <div id='parking-holder'>
   <div id='parkings-options'>
@@ -7,7 +6,10 @@
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('<%= cl_image_path parking.picture, height: 300, width: 400, crop: :fill %>')">
         <h2><%= parking.name.upcase %></h2>
         <p><%= parking.address %></p>
-        <p>Price/hour: <%= parking.price %></p>
+        <div class="card-price">
+          <p>Price/hour:</p>
+          <p class="highlight-price"> <%= parking.price %></p>
+        </div>
         <div class="rating">
           <% if parking.reviews.last.nil? %>
           <i class="nr"> Not rated</i>
