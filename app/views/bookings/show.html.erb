@@ -1,10 +1,14 @@
 
 <h1>Booked</h1>
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @booking.parking.picture, height: 300, width: 400, crop: :fill %>')">
-  <div class="container transparent">
-    <h1><%= @booking.parking.name %></h1>
-    <h2><%= @booking.parking.address %></h2>
+  <% if @booking.reviews.first.nil? %>
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Add review</button>
+  <%= render "reviews/new", booking: @booking, review: Review.new %>
+  <% end %>
+  <%= link_to "Back", root_path, class: "btn btn-danger" %>
+
+<div id="book-holder">
+  <div id="book-options">
     <p><%= @booking.date %></p>
     <p>Status: <% if @booking.parking.confirmation %>
       Approved
@@ -12,33 +16,73 @@
       Pending
       <% end %>
     </p>
-    <p>Covered: <% if @booking.parking.covered %>
-        <i class="far fa-check-circle checkmark"></i>
-      <% else %>
-        <i class="far fa-times-circle times"></i>
-      <% end %>
-    </p>
-    <p>Security: <% if @booking.parking.security %>
-        <i class="far fa-check-circle checkmark"></i>
-      <% else %>
-        <i class="far fa-times-circle times"></i>
-      <% end %>
-    </p>
-    <p>Camera: <% if @booking.parking.camera %>
-        <i class="far fa-check-circle checkmark"></i>
-      <% else %>
-        <i class="far fa-times-circle times"></i>
-      <% end %>
-    </p>
-    <p>Size: <%= @booking.parking.size %></p>
-    <p>Price/hour: <%= @booking.parking.price %></p>
-    <% if @booking.reviews.first.nil? %>
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Add review</button>
-      <%= render "reviews/new", booking: @booking, review: Review.new %>
-    <% end %>
-    <%= link_to "Back", root_path, class: "btn btn-danger" %>
-  </div>
-</div>
 
+    <div class="container description-show">
+      <h1><%= @booking.parking.name.upcase %></h1>
+      <div id="show-price">
+        <p class="remarcado">Price/hour: <strong><%= @booking.parking.price %></strong></p>
+      </div>
+      <h3><%= @booking.parking.size %></h3>
+      <ul class="list-inline">
+        <li>
+          <p><% if @booking.parking.confirmation %>
+           <i class="fas fa-bolt active"></i>
+           <% else %>
+           <i class="fas fa-bolt unactive"></i>
+           <% end %>
+         </p>
+       </li>
+       <li>
+         <p><% if @booking.parking.covered %>
+          <i class="fas fa-umbrella active"></i>
+          <% else %>
+          <i class="fas fa-umbrella unactive"></i>
+          <% end %>
+        </p>
+        <li>
+          <p><% if @booking.parking.security %>
+            <%= image_tag "policeman-active", width:50 %>
+            <% else %>
+            <%= image_tag "policeman-unactive"%>
+            <% end %>
+          </p>
+        </li>
+        <li>
+          <p><% if @booking.parking.camera %>
+            <i class="fas fa-video active"></i>
+            <% else %>
+            <i class="fas fa-video unactive"></i>
+            <% end %>
+          </p>
+        </li>
+        <li>
+          <p><% if @booking.parking.gated %>
+            <%= image_tag "fence-active", width:50 %>
+            <% else %>
+            <%= image_tag "fence-unactive"%>
+            <% end %>
+          </p>
+        </li>
+      </ul>
+
+
+      <p>Size: <%= @booking.parking.size %></p>
+      <p>Price/hour: <%= @booking.parking.price %></p>
+    </div>
+</div>
+    <div id="book-map">
+      <h2><%= @booking.parking.address %></h2>
+      <div
+      id="map"
+      style="width: 50%;height: 300px; margin-top: 8px; margin-bottom: 20px"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      >
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
 
 
