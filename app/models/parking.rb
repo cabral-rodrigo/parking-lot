@@ -1,4 +1,5 @@
 class Parking < ApplicationRecord
+  include PgSearch
   SIZE_CAR = ["Small Car", "Medium Car", "Big Car", "Truck"]
   mount_uploader :picture, PictureUploader
   belongs_to :user
@@ -17,6 +18,12 @@ class Parking < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  pg_search_scope :search_by_name_and_address,
+    against: [ :name, :address ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
 
   def reviews
     reviews = []
