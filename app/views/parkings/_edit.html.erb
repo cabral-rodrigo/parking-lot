@@ -1,0 +1,25 @@
+<!-- Modal -->
+<div class="modal fade" id="newBooking" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Booking</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(parking) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :confirmation, as: :radio_buttons, collection: [['yes', true], ['no', false]], label_method: :first, value_method: :second  %>
+          <%= f.input :covered, as: :radio_buttons, collection: [['yes', true], ['no', false]], label_method: :first, value_method: :second  %>
+          <%= f.input :security, as: :radio_buttons, collection: [['yes', true], ['no', false]], label_method: :first, value_method: :second  %>
+          <%= f.input :camera, as: :radio_buttons, collection: [['yes', true], ['no', false]], label_method: :first, value_method: :second  %>
+          <%= f.input :size, collection: ["Small Car", "Medium Car", "Big Car", "Truck"] %>
+          <%= f.input :gated, as: :radio_buttons, collection: [['yes', true], ['no', false]], label_method: :first, value_method: :second  %>
+          <%= f.input :price, label: "$/hr"%>
+          <%= f.button :submit, "Update parking", class: "btn btn-danger" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
