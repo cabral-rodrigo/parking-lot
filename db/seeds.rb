@@ -49,7 +49,7 @@ parking_attributes = [
     gated:        true,
     price:        50,
     user:         user1,
-    name:         "cochera de Meli 1"
+    name:         "Cochera de Meli 1"
   },
   {
     address:      'Thames 2338, Buenos Aires',
@@ -61,7 +61,7 @@ parking_attributes = [
     gated:        true,
     price:        50,
     user:         user1,
-    name:         "cochera de Meli 2"
+    name:         "Cochera de Meli 2"
   },
     {
     address:      'Jean Jaures 1165, Buenos Aires',
@@ -73,11 +73,13 @@ parking_attributes = [
     gated:        true,
     price:        50,
     user:         user1,
-    name:         "cochera de rodrigo"
+    name:         "Cochera de Rodrigo"
   },
 ]
 
-COCHERAS = ["https://source.unsplash.com/random", "https://source.unsplash.com/random", "https://source.unsplash.com/random"]
+COCHERAS = ["https://www.dailyherald.com/storyimage/DA/20121202/business/712029983/AR/0/AR-712029983.jpg&updated=201211281541&MaxW=600&maxH=600&noborder",
+            "https://static1.sosiva451.com/4778415/3c23b063-a397-4054-8b60-3c89dec55907_u_large.jpg",
+            "https://images.homify.com/c_fill,f_auto,h_500,q_auto,w_1280/v1481141597/p/photo/image/1729876/01_Res_Francisco_frente.jpg"]
 
 parking_attributes.each_with_index do |parking, index|
   p = Parking.new(parking)
