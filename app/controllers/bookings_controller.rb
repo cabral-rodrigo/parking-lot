@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    authorize @booking
+    authorize @booking if @parking.user != current_user
   end
 
   def create
@@ -39,7 +39,7 @@ class BookingsController < ApplicationController
     end
   end
 
-   private
+  private
 
   def booking_params
     params.require(:booking).permit(:status, :date)

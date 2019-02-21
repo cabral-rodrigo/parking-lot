@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     @booking = Booking.find(params[:booking_id])
     @review.booking = @booking
     @review.date = Date.today
-    authorize @review
+    authorize @review if (@booking.user == current_user) && (@review.user != current_user)
     if @review.save
       redirect_to @booking
     else
