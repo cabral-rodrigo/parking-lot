@@ -1,0 +1,23 @@
+<h1>Reviews</h1>
+
+<div id="reviews">
+  <% parking.bookings.each do |booking| %>
+    <% if !booking.reviews.last.nil? %>
+      <div class="card-product">
+        <% if booking.reviews.last[:picture].nil?%>
+          <div style="background-image: url(<%= cl_image_path booking.parking.picture, height: 300, width: 400, crop: :fill %>); height: 11.1em; width: 10em">
+          </div>
+        <% else %>
+          <div style="background-image: url(<%= cl_image_path booking.reviews.last.picture, height: 300, width: 400, crop: :fill %>); height: 11.1em; width: 10em">
+          </div>
+        <% end %>
+        <div class="card-product-infos">
+          <% booking.reviews.last.rating_user.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+          <p><%= booking.reviews.last.content %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
