@@ -1,0 +1,30 @@
+<div class="card-category">
+
+   <div class="park-image">
+    <div style="background-image: url(<%= cl_image_path booking.parking.picture, height: 300, width: 400, crop: :fill %>); height: 11.1em; width: 10em">
+    </div>
+    <div class="parking-info">
+      <h2><%= booking.parking.name.upcase %></h2>
+       <p><%= booking.parking.address %></p>
+
+<p>
+   <% if booking.parking.confirmation  %>
+    Approved <i class="fas fa-check-circle"style="color:green"></i>
+    <% else %>
+    Pending <i class="fas fa-exclamation-circle"style="color:yellow"></i>
+    <% end %>
+  </strong>
+</p>
+       <p><%= booking.date %></p>
+  <div class="rating">
+    <% if booking.parking.reviews.last.nil? %>
+    <i class="nr"> Not rated</i>
+    <% else %>
+    <% end %>
+
+ </div>
+    </div>
+  </div>
+
+  <%= link_to "", parking_path(booking.parking), class:'card-link' %>
+</div>

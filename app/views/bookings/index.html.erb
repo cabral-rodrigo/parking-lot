@@ -1,25 +1,10 @@
-<h1 style="margin: 0px; padding: 8px">My Bookings</h1>
-
+<div class="container">
+<h1 style="margin: 0px; padding: 8px">My Reservations</h1>
 <div id='parking-holder'>
   <div id='parkings-options'>
     <% @bookings.each do |booking| %>
-    <div>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('<%= cl_image_path booking.parking.picture, height: 300, width: 400, crop: :fill %>')">
-        <h2><%= booking.parking.name.upcase %> - <%= booking.parking.address %></h2>
-        <p><%= booking.status %> - <%= booking.date %></p>
-        <p>Price/hour: <%= booking.parking.price %></p>
-        <div class="rating">
-          <% if booking.parking.reviews.last.nil? %>
-          <i class="nr"> Not rated</i>
-          <% else %>
-          <% (booking.parking.reviews.map{|review| review.rating_user}.sum.to_f / booking.parking.reviews.size).round.times do %>
-          <i class="fas fa-star rated"></i>
-          <% end %>
-          <% end %>
-        </div>
-        <%= link_to "", booking_path(booking), class:'card-link' %>
-      </div>
-    </div>
+      <%= render "bookings/card", booking: booking %>
     <% end %>
   </div>
+</div>
 </div>
