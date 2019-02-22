@@ -5,7 +5,7 @@
   <div id='parkings-options'>
     <% @parkings.each do |parking| %>
     <div>
-      <div class="card-category">
+      <div class="card-category card" data-parking-id="<%= parking.id %>">
 
         <div class="card-price">
           <p class="highlight-price">$<%= parking.price %></p>
