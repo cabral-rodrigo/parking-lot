@@ -7,6 +7,8 @@
 
 #parkings-options {
   flex: 1 0 30%;
+  height: 86vh;
+  overflow: scroll;
 }
 
 #parkings-map {
@@ -21,5 +23,6 @@
   }
   #parkings-options {
     flex: none;
+
   }
 }
