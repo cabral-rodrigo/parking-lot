@@ -47,9 +47,9 @@ parking_attributes = [
     camera:       true,
     size:         'Small Car',
     gated:        true,
-    price:        50,
+    price:        33,
     user:         user1,
-    name:         "Cochera de Meli 1"
+    name:         "1 Cochera de Meli 1"
   },
   {
     address:      'Thames 2338, Buenos Aires',
@@ -59,9 +59,9 @@ parking_attributes = [
     camera:       false,
     size:         'Medium Car',
     gated:        true,
-    price:        50,
+    price:        60,
     user:         user1,
-    name:         "Cochera de Meli 2"
+    name:         "2 Cochera de Meli 2"
   },
     {
     address:      'Jean Jaures 1165, Buenos Aires',
@@ -69,17 +69,239 @@ parking_attributes = [
     covered:      true,
     security:     true,
     camera:       false,
+    size:         'Small Car',
+    gated:        true,
+    price:        10,
+    user:         user1,
+    name:         "3 Cochera de Rodrigo"
+  },
+    {
+    address:      'Malabia 2240, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
     size:         'Medium Car',
+    gated:        true,
+    price:        45,
+    user:         user1,
+    name:         "4 Cochera de Bill"
+  },
+    {
+    address:      'Malabia 2000, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Big Car',
+    gated:        true,
+    price:        20,
+    user:         user1,
+    name:         "5 Cochera de Nico"
+  },
+    {
+    address:      'Malabia 1500, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Small Car',
+    gated:        true,
+    price:        48,
+    user:         user1,
+    name:         "6 Cochera de Miguel"
+  },
+    {
+    address:      'Migueletes 2213, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Small Car',
+    gated:        true,
+    price:        23,
+    user:         user1,
+    name:         "7 Cochera de Sam"
+  },
+      {
+    address:      'Migueketes 1500, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Big Car',
+    gated:        true,
+    price:        78,
+    user:         user1,
+    name:         "8 Cochera de Claire"
+  },
+    {
+    address:      'Juramento 1000, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Big Car',
+    gated:        true,
+    price:        52,
+    user:         user1,
+    name:         "9 Cochera de Alfonso"
+  },
+    {
+    address:      'Jean jaures 399, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Big Car',
+    gated:        true,
+    price:        56,
+    user:         user1,
+    name:         "10 Cochera de Matías"
+  },
+      {
+    address:      'Gorriti 1015, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Big Car',
+    gated:        true,
+    price:        58,
+    user:         user1,
+    name:         "11 Cochera de Sebastían"
+  },
+    {
+    address:      'Paraguay 1065, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Big Car',
+    gated:        true,
+    price:        80,
+    user:         user1,
+    name:         "12 Cochera de Sheila"
+  },
+      {
+    address:      'Paraguay 1165, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Medium Car',
+    gated:        true,
+    price:        67,
+    user:         user1,
+    name:         "13 Cochera de Eloy"
+  },
+      {
+    address:      'San Martin de Tours 2908, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Medium Car',
+    gated:        true,
+    price:        70,
+    user:         user1,
+    name:         "14 Cochera de Victoria"
+  },
+      {
+    address:      'Yatay 1165, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Small Car',
     gated:        true,
     price:        50,
     user:         user1,
-    name:         "Cochera de Rodrigo"
+    name:         "15 Cochera de Elizabeth"
+  },
+      {
+    address:      'Bulnes 1700, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Big Car',
+    gated:        true,
+    price:        63,
+    user:         user1,
+    name:         "16 Cochera de Alan"
+  },
+    {
+    address:      'Bulnes 1890, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Big Car',
+    gated:        true,
+    price:        95,
+    user:         user1,
+    name:         "17 Cochera de Patricio"
+  },
+      {
+    address:      'Bulnes 2707, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Small Car',
+    gated:        true,
+    price:        60,
+    user:         user1,
+    name:         "18 Cochera de Lucía"
+  },
+      {
+    address:      'Jeronimo Salguero 1165, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Medium Car',
+    gated:        true,
+    price:        54,
+    user:         user1,
+    name:         "19 Cochera de Diego"
+  },
+      {
+    address:      'Jean Jaures 1200, Buenos Aires',
+    confirmation: false,
+    covered:      true,
+    security:     true,
+    camera:       false,
+    size:         'Big Car',
+    gated:        true,
+    price:        50,
+    user:         user1,
+    name:         "20 Cochera de Laura"
   },
 ]
 
 COCHERAS = ["https://www.dailyherald.com/storyimage/DA/20121202/business/712029983/AR/0/AR-712029983.jpg&updated=201211281541&MaxW=600&maxH=600&noborder",
-            "https://static1.sosiva451.com/4778415/3c23b063-a397-4054-8b60-3c89dec55907_u_large.jpg",
-            "https://images.homify.com/c_fill,f_auto,h_500,q_auto,w_1280/v1481141597/p/photo/image/1729876/01_Res_Francisco_frente.jpg"]
+            "http://swamplot.com/wp-content/uploads/2010/11/eisele-house.jpg",
+            "https://i.ytimg.com/vi/1JF2UuSsbB8/hqdefault.jpg",
+            "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1459&q=80",
+            "https://images.unsplash.com/photo-1495435229349-e86db7bfa013?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=929&q=80https://images.unsplash.com/photo-1495435229349-e86db7bfa013?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=929&q=80",
+            "https://images.unsplash.com/photo-1508465487720-54cef28cc719?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80https://images.unsplash.com/photo-1508465487720-54cef28cc719?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80",
+            "https://images.unsplash.com/photo-1470880587080-599f3e4f0913?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1470880587080-599f3e4f0913?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+            "https://images.unsplash.com/photo-1505545121909-2d48e22dede6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80https://images.unsplash.com/photo-1505545121909-2d48e22dede6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80",
+            "https://images.unsplash.com/photo-1512464099600-d83e8069aa75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1512464099600-d83e8069aa75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+            "https://images.unsplash.com/photo-1530268578403-df6e89da0d30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1530268578403-df6e89da0d30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+            "https://images.unsplash.com/photo-1495434951808-370bf1154920?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=688&q=80https://images.unsplash.com/photo-1495434951808-370bf1154920?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=688&q=80",
+            "https://images.unsplash.com/photo-1474408886716-087263db7da1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80https://images.unsplash.com/photo-1474408886716-087263db7da1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80",
+            "https://images.unsplash.com/photo-1463541555616-ad5d33ef6339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1463541555616-ad5d33ef6339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+            "https://images.unsplash.com/photo-1489847737011-2f9e5f5aa2e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80https://images.unsplash.com/photo-1489847737011-2f9e5f5aa2e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80",
+            "https://images.unsplash.com/photo-1445548671936-e1ff8a6a6b20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80",
+            "https://images.unsplash.com/photo-1523918646955-42c104ef7349?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1523918646955-42c104ef7349?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80]",
+            "https://images.unsplash.com/photo-1532439771208-8fda693b96b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1532439771208-8fda693b96b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+            "https://images.unsplash.com/photo-1548343361-02248be15911?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE2ODQ0fQ&auto=format&fit=crop&w=1500&q=80https://images.unsplash.com/photo-1548343361-02248be15911?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE2ODQ0fQ&auto=format&fit=crop&w=1500&q=80",
+            "https://images.unsplash.com/photo-1494255177615-8af17149db84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+            "https://images.unsplash.com/photo-1494976351278-20cf4a33d65b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60https://images.unsplash.com/photo-1494976351278-20cf4a33d65b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
+          ]
 
 parking_attributes.each_with_index do |parking, index|
   p = Parking.new(parking)
