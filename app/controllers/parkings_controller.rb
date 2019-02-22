@@ -9,7 +9,7 @@ class ParkingsController < ApplicationController
         {
           lng: parking.longitude,
           lat: parking.latitude,
-          infoWindow: { content: render_to_string(partial: "/parkings/map_info_window", locals: { parking: parking }) },
+          infoWindow: { content: render_to_string(partial: "infowindow", locals: { parking: parking }) },
       id: parking.id # we add the id of the flat in the hash
         }
         end
@@ -20,7 +20,8 @@ class ParkingsController < ApplicationController
           {
             lng: parking.longitude,
             lat: parking.latitude,
-            infoWindow: render_to_string(partial: "infowindow", locals: { parking: parking })           # id: parking.id # we add the id of the flat in the hash
+            infoWindow: render_to_string(partial: "infowindow", locals: { parking: parking }),
+            id: parking.id           # id: parking.id # we add the id of the flat in the hash
           }
       end
     end
