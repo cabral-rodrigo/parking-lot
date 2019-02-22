@@ -83,3 +83,14 @@ h3 {
 
 }
 
+#book-holder {
+  display: flex;
+}
+
+#book-options {
+  flex: 1 0 50%;
+}
+
+#book-map {
+  flex: 1 0 50%;
+}

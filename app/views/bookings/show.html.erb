@@ -1,44 +1,94 @@
 
-<h1>Booked</h1>
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @booking.parking.picture, height: 300, width: 400, crop: :fill %>')">
-  <div class="container transparent">
-    <h1><%= @booking.parking.name %></h1>
-    <h2><%= @booking.parking.address %></h2>
-    <p><%= @booking.date %></p>
-    <p>Status: <% if @booking.parking.confirmation %>
-      Approved
-      <% else %>
-      Pending
-      <% end %>
-    </p>
-    <p>Covered: <% if @booking.parking.covered %>
-        <i class="far fa-check-circle checkmark"></i>
-      <% else %>
-        <i class="far fa-times-circle times"></i>
-      <% end %>
-    </p>
-    <p>Security: <% if @booking.parking.security %>
-        <i class="far fa-check-circle checkmark"></i>
-      <% else %>
-        <i class="far fa-times-circle times"></i>
-      <% end %>
-    </p>
-    <p>Camera: <% if @booking.parking.camera %>
-        <i class="far fa-check-circle checkmark"></i>
-      <% else %>
-        <i class="far fa-times-circle times"></i>
-      <% end %>
-    </p>
-    <p>Size: <%= @booking.parking.size %></p>
-    <p>Price/hour: <%= @booking.parking.price %></p>
-    <% if @booking.reviews.first.nil? %>
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Add review</button>
-      <%= render "reviews/new", booking: @booking, review: Review.new %>
-    <% end %>
-    <%= link_to "Back", root_path, class: "btn btn-danger" %>
+<div id="show-banner">
+  <div class="banner flex-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @booking.parking.picture, height: 1000, width: 1000 %>')">
   </div>
+  <div id="show-avatar">
+   <img class="avatar-bordered" src='https://kitt.lewagon.com/placeholder/users/krokrob'/>
+ </div>
 </div>
 
+<div class="container description-show">
+  <h1><%= @booking.parking.name.upcase %></h1>
+
+
+  <h1>Status:<strong> <% if @booking.parking.confirmation %>
+    Approved <i class="fas fa-check-circle"style="color:green"></i>
+    <% else %>
+    Pending <i class="fas fa-exclamation-circle"style="color:yellow"></i>
+    <% end %>
+  </strong>
+
+
+</h1>
+<h3><%= @booking.date %></h3>
+<h3>Price per hour: <strong><%= @booking.parking.price %></strong></h3>
+
+
+<div class="container description-show" style="margin: 0px">
+
+  <h3><%= @booking.parking.size %></h3>
+  <ul class="list-inline">
+    <li>
+      <p><% if @booking.parking.confirmation %>
+       <i class="fas fa-bolt active"></i>
+       <% else %>
+       <i class="fas fa-bolt unactive"></i>
+       <% end %>
+     </p>
+   </li>
+   <li>
+     <p><% if @booking.parking.covered %>
+      <i class="fas fa-umbrella active"></i>
+      <% else %>
+      <i class="fas fa-umbrella unactive"></i>
+      <% end %>
+    </p>
+    <li>
+      <p><% if @booking.parking.security %>
+        <%= image_tag "policeman-active", width:50 %>
+        <% else %>
+        <%= image_tag "policeman-unactive"%>
+        <% end %>
+      </p>
+    </li>
+    <li>
+      <p><% if @booking.parking.camera %>
+        <i class="fas fa-video active"></i>
+        <% else %>
+        <i class="fas fa-video unactive"></i>
+        <% end %>
+      </p>
+    </li>
+    <li>
+      <p><% if @booking.parking.gated %>
+        <%= image_tag "fence-active", width:50 %>
+        <% else %>
+        <%= image_tag "fence-unactive"%>
+        <% end %>
+      </p>
+    </li>
+  </ul>
+
+</div>
+
+<div class="show-options">
+  <% if @booking.reviews.first.nil? %>
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newBooking">Add review</button>
+  <%= render "reviews/new", booking: @booking, review: Review.new %>
+  <% end %>
+  <%= link_to "Back", root_path, class: "btn btn-danger" %>
+</div>
+
+<p><%= @booking.parking.address %></p>
+<div
+id="map"
+style="width: 100%;height: 600px; margin-top: 8px; margin-bottom: 20px"
+data-markers="<%= @markers.to_json %>"
+data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+>
+</div>
+</div>
+</div>
 
 
