@@ -49,7 +49,7 @@ parking_attributes = [
     gated:        true,
     price:        33,
     user:         user1,
-    name:         "Cochera de Meli 1"
+    name:         "1 Cochera de Meli 1"
   },
   {
     address:      'Thames 2338, Buenos Aires',
@@ -61,7 +61,7 @@ parking_attributes = [
     gated:        true,
     price:        60,
     user:         user1,
-    name:         "Cochera de Meli 2"
+    name:         "2 Cochera de Meli 2"
   },
     {
     address:      'Jean Jaures 1165, Buenos Aires',
@@ -73,7 +73,7 @@ parking_attributes = [
     gated:        true,
     price:        10,
     user:         user1,
-    name:         "Cochera de Rodrigo"
+    name:         "3 Cochera de Rodrigo"
   },
     {
     address:      'Malabia 2240, Buenos Aires',
@@ -85,22 +85,22 @@ parking_attributes = [
     gated:        true,
     price:        45,
     user:         user1,
-    name:         "Cochera de Bill"
+    name:         "4 Cochera de Bill"
   },
     {
-    address:      'Giribone 915, Buenos Aires',
+    address:      'Malabia 2000, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
     camera:       false,
-    size:         'Large Car',
+    size:         'Big Car',
     gated:        true,
     price:        20,
     user:         user1,
-    name:         "Cochera de Nico"
+    name:         "5 Cochera de Nico"
   },
     {
-    address:      'Maure 1165, Buenos Aires',
+    address:      'Malabia 1500, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
@@ -109,7 +109,7 @@ parking_attributes = [
     gated:        true,
     price:        48,
     user:         user1,
-    name:         "Cochera de Miguel"
+    name:         "6 Cochera de Miguel"
   },
     {
     address:      'Migueletes 2213, Buenos Aires',
@@ -121,67 +121,67 @@ parking_attributes = [
     gated:        true,
     price:        23,
     user:         user1,
-    name:         "Cochera de Sam"
+    name:         "7 Cochera de Sam"
   },
       {
-    address:      'Tucuman 1165, Buenos Aires',
+    address:      'Migueketes 1500, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
     camera:       false,
-    size:         'Large Car',
+    size:         'Big Car',
     gated:        true,
     price:        78,
     user:         user1,
-    name:         "Cochera de Claire"
+    name:         "8 Cochera de Claire"
   },
     {
-    address:      'Olleros 3640, Buenos Aires',
+    address:      'Juramento 1000, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
     camera:       false,
-    size:         'Large Car',
+    size:         'Big Car',
     gated:        true,
     price:        52,
     user:         user1,
-    name:         "Cochera de Alfonso"
+    name:         "9 Cochera de Alfonso"
   },
     {
-    address:      'Juramento 3035, Buenos Aires',
+    address:      'Jean jaures 399, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
     camera:       false,
-    size:         'Large Car',
+    size:         'Big Car',
     gated:        true,
     price:        56,
     user:         user1,
-    name:         "Cochera de Matías"
+    name:         "10 Cochera de Matías"
   },
       {
-    address:      'Guardia Vieja 4465, Buenos Aires',
+    address:      'Gorriti 1015, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
     camera:       false,
-    size:         'Large Car',
+    size:         'Big Car',
     gated:        true,
     price:        58,
     user:         user1,
-    name:         "Cochera de Sebastían"
+    name:         "11 Cochera de Sebastían"
   },
     {
-    address:      'Gorriti 4015, Buenos Aires',
+    address:      'Paraguay 1065, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
     camera:       false,
-    size:         'Large Car',
+    size:         'Big Car',
     gated:        true,
     price:        80,
     user:         user1,
-    name:         "Cochera de Sheila"
+    name:         "12 Cochera de Sheila"
   },
       {
     address:      'Paraguay 1165, Buenos Aires',
@@ -193,7 +193,7 @@ parking_attributes = [
     gated:        true,
     price:        67,
     user:         user1,
-    name:         "Cochera de Eloy"
+    name:         "13 Cochera de Eloy"
   },
       {
     address:      'San Martin de Tours 2908, Buenos Aires',
@@ -205,7 +205,7 @@ parking_attributes = [
     gated:        true,
     price:        70,
     user:         user1,
-    name:         "Cochera de Victoria"
+    name:         "14 Cochera de Victoria"
   },
       {
     address:      'Yatay 1165, Buenos Aires',
@@ -217,31 +217,31 @@ parking_attributes = [
     gated:        true,
     price:        50,
     user:         user1,
-    name:         "Cochera de Elizabeth"
+    name:         "15 Cochera de Elizabeth"
   },
       {
-    address:      'Oro 2165, Buenos Aires',
+    address:      'Bulnes 1700, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
     camera:       false,
-    size:         'Large Car',
+    size:         'Big Car',
     gated:        true,
     price:        63,
     user:         user1,
-    name:         "Cochera de Alan"
+    name:         "16 Cochera de Alan"
   },
     {
-    address:      'Armenia 1366, Buenos Aires',
+    address:      'Bulnes 1890, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
     camera:       false,
-    size:         'Large Car',
+    size:         'Big Car',
     gated:        true,
     price:        95,
     user:         user1,
-    name:         "Cochera de Patricio"
+    name:         "17 Cochera de Patricio"
   },
       {
     address:      'Bulnes 2707, Buenos Aires',
@@ -253,7 +253,7 @@ parking_attributes = [
     gated:        true,
     price:        60,
     user:         user1,
-    name:         "Cochera de Lucía"
+    name:         "18 Cochera de Lucía"
   },
       {
     address:      'Jeronimo Salguero 1165, Buenos Aires',
@@ -265,19 +265,19 @@ parking_attributes = [
     gated:        true,
     price:        54,
     user:         user1,
-    name:         "Cochera de Diego"
+    name:         "19 Cochera de Diego"
   },
       {
-    address:      'Zabala 3402, Buenos Aires',
+    address:      'Jean Jaures 1200, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
     camera:       false,
-    size:         'Large Car',
+    size:         'Big Car',
     gated:        true,
     price:        50,
     user:         user1,
-    name:         "Cochera de Laura"
+    name:         "20 Cochera de Laura"
   },
 ]
 
