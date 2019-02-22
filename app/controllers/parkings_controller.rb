@@ -38,7 +38,7 @@ class ParkingsController < ApplicationController
     if @parking.save
       redirect_to parking_path(@parking)
     else
-      render :new
+      render :index
     end
   end
 

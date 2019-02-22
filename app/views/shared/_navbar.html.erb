@@ -14,7 +14,7 @@
       <%= render "parkings/new", parking: Parking.new %>
       <% if !current_user.owned_parkings.empty? %>
         <%= link_to "My Spaces (#{current_user.owned_parkings.count})", owner_parkings_path, class: "navbar-wagon-item navbar-wagon-link" %>
-        <%= link_to "My Bookings (#{current_user.owned_parkings.sum{|parking| parking.bookings.count }})", owner_bookings_path, class: "navbar-wagon-item navbar-wagon-link" %>
+        <%= link_to "My Bookings (#{current_user.owned_parkings.sum{|parking| parking.bookings.sum{|booking| ++1}}})", bookings_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <% end %>
       <%= link_to "My Reservations", client_bookings_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <!-- Avatar with dropdown menu -->
