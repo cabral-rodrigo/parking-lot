@@ -9,8 +9,8 @@ class ParkingsController < ApplicationController
         {
           lng: parking.longitude,
           lat: parking.latitude,
-          infoWindow: { content: render_to_string(partial: "infowindow", locals: { parking: parking }) },
-      id: parking.id # we add the id of the flat in the hash
+          infoWindow: render_to_string(partial: "infowindow", locals: { parking: parking }),
+            id: parking.id     # we add the id of the flat in the hash
         }
         end
       else
