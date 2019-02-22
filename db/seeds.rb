@@ -88,7 +88,7 @@ parking_attributes = [
     name:         "Cochera de Bill"
   },
     {
-    address:      'Gurruchaga 1165, Buenos Aires',
+    address:      'Giribone 915, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
@@ -100,7 +100,7 @@ parking_attributes = [
     name:         "Cochera de Nico"
   },
     {
-    address:      'Charcas 1165, Buenos Aires',
+    address:      'Maure 1165, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
@@ -124,7 +124,7 @@ parking_attributes = [
     name:         "Cochera de Sam"
   },
       {
-    address:      'Tucumán 1165, Buenos Aires',
+    address:      'Tucuman 1165, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
@@ -136,7 +136,7 @@ parking_attributes = [
     name:         "Cochera de Claire"
   },
     {
-    address:      'Murillo 666, Buenos Aires',
+    address:      'Olleros 3640, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
@@ -148,7 +148,7 @@ parking_attributes = [
     name:         "Cochera de Alfonso"
   },
     {
-    address:      'Terrero 1165, Buenos Aires',
+    address:      'Juramento 3035, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
@@ -160,7 +160,7 @@ parking_attributes = [
     name:         "Cochera de Matías"
   },
       {
-    address:      'Fitz Roy 2165, Buenos Aires',
+    address:      'Guardia Vieja 4465, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
@@ -172,7 +172,7 @@ parking_attributes = [
     name:         "Cochera de Sebastían"
   },
     {
-    address:      'Mansilla 1165, Buenos Aires',
+    address:      'Gorriti 4015, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
@@ -232,7 +232,7 @@ parking_attributes = [
     name:         "Cochera de Alan"
   },
     {
-    address:      'Republica Arabe Siria 3065, Buenos Aires',
+    address:      'Armenia 1366, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
@@ -268,7 +268,7 @@ parking_attributes = [
     name:         "Cochera de Diego"
   },
       {
-    address:      'Zelaya 3053, Buenos Aires',
+    address:      'Zabala 3402, Buenos Aires',
     confirmation: false,
     covered:      true,
     security:     true,
@@ -277,7 +277,7 @@ parking_attributes = [
     gated:        true,
     price:        50,
     user:         user1,
-    name:         "Cochera de Rodrigo"
+    name:         "Cochera de Laura"
   },
 ]
 
@@ -288,19 +288,19 @@ COCHERAS = ["https://www.dailyherald.com/storyimage/DA/20121202/business/7120299
             "https://images.unsplash.com/photo-1495435229349-e86db7bfa013?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=929&q=80https://images.unsplash.com/photo-1495435229349-e86db7bfa013?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=929&q=80",
             "https://images.unsplash.com/photo-1508465487720-54cef28cc719?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80https://images.unsplash.com/photo-1508465487720-54cef28cc719?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80",
             "https://images.unsplash.com/photo-1470880587080-599f3e4f0913?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1470880587080-599f3e4f0913?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-            "https://images.unsplash.com/photo-1470880587080-599f3e4f0913?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1470880587080-599f3e4f0913?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
             "https://images.unsplash.com/photo-1505545121909-2d48e22dede6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80https://images.unsplash.com/photo-1505545121909-2d48e22dede6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80",
             "https://images.unsplash.com/photo-1512464099600-d83e8069aa75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1512464099600-d83e8069aa75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
             "https://images.unsplash.com/photo-1530268578403-df6e89da0d30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1530268578403-df6e89da0d30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
             "https://images.unsplash.com/photo-1495434951808-370bf1154920?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=688&q=80https://images.unsplash.com/photo-1495434951808-370bf1154920?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=688&q=80",
             "https://images.unsplash.com/photo-1474408886716-087263db7da1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80https://images.unsplash.com/photo-1474408886716-087263db7da1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80",
             "https://images.unsplash.com/photo-1463541555616-ad5d33ef6339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1463541555616-ad5d33ef6339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-            "https://images.unsplash.com/photo-1463541555616-ad5d33ef6339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1463541555616-ad5d33ef6339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
             "https://images.unsplash.com/photo-1489847737011-2f9e5f5aa2e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80https://images.unsplash.com/photo-1489847737011-2f9e5f5aa2e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80",
             "https://images.unsplash.com/photo-1445548671936-e1ff8a6a6b20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80",
             "https://images.unsplash.com/photo-1523918646955-42c104ef7349?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1523918646955-42c104ef7349?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80]",
             "https://images.unsplash.com/photo-1532439771208-8fda693b96b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1532439771208-8fda693b96b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-            "https://images.unsplash.com/photo-1548343361-02248be15911?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE2ODQ0fQ&auto=format&fit=crop&w=1500&q=80https://images.unsplash.com/photo-1548343361-02248be15911?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE2ODQ0fQ&auto=format&fit=crop&w=1500&q=80"
+            "https://images.unsplash.com/photo-1548343361-02248be15911?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE2ODQ0fQ&auto=format&fit=crop&w=1500&q=80https://images.unsplash.com/photo-1548343361-02248be15911?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjE2ODQ0fQ&auto=format&fit=crop&w=1500&q=80",
+            "https://images.unsplash.com/photo-1494255177615-8af17149db84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
+            "https://images.unsplash.com/photo-1494976351278-20cf4a33d65b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60https://images.unsplash.com/photo-1494976351278-20cf4a33d65b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
           ]
 
 parking_attributes.each_with_index do |parking, index|
