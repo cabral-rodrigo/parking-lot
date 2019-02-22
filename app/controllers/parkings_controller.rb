@@ -9,18 +9,19 @@ class ParkingsController < ApplicationController
         {
           lng: parking.longitude,
           lat: parking.latitude,
-          infoWindow: render_to_string(partial: "infowindow", locals: { parking: parking })
+          infoWindow: { content: render_to_string(partial: "/parkings/map_info_window", locals: { parking: parking }) },
+      id: parking.id # we add the id of the flat in the hash
         }
         end
       else
         @parkings = policy_scope(Parking).where.not(latitude: nil, longitude: nil)
 
-      @markers = @parkings.map do |parking|
-        {
-          lng: parking.longitude,
-          lat: parking.latitude,
-          infoWindow: render_to_string(partial: "infowindow", locals: { parking: parking })
-        }
+        @markers = @parkings.map do |parking|
+          {
+            lng: parking.longitude,
+            lat: parking.latitude,
+            infoWindow: render_to_string(partial: "infowindow", locals: { parking: parking })           # id: parking.id # we add the id of the flat in the hash
+          }
       end
     end
   end
